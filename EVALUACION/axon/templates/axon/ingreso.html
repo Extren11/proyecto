@@ -17,7 +17,7 @@
     <br>
     <div class="login-box">
       <h2>Inicio de sesión</h2>
-      <form action="inicio/" method="POST">
+      <form action="{%url 'inicio'%}" method="POST">
         {% csrf_token %}
         <div class="user-box">
           <input type="text" name="username" placeholder="Usuario" required>
@@ -25,9 +25,9 @@
         <div class="user-box">
           <input type="password" name="password" placeholder="Contraseña" required>
         </div>
-        <button type="submit">Iniciar sesión</button>
+        <button type="submit" href="{%url 'inicio'%}">Iniciar sesión</button>
       </form>
-      <p>No tienes una cuenta? <a href="registro/">Regístrate aquí</a></p>
+      <p>No tienes una cuenta? <a href="{%url 'registro'%}">Regístrate aquí</a></p>
     </div>
   </body>
 </html>
